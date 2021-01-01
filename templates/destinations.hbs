@@ -1,0 +1,43 @@
+{{> header}}
+<section id="viewMydestinations">
+    <h3>Your destinations</h3>
+    {{#each destinations}}
+    {{#if this.myDest}}
+    <div class="destination-ticket">
+        <div class="destination-left">
+            <img src="{{this.imgUrl}}"
+                alt="">
+        </div>
+        <div class="destination-right">
+            <div>
+                <h3>{{this.destination}}</h3><span>{{this.departureDate}}</span>
+            </div>
+            <div>
+                to {{this.city}}
+            </div>
+            <p>15 days </p>
+            <a href="#/delete/{{this.id}}" class="remove">REMOVE</a>
+            <a href="#/details/{{this.id}}" class="details">Details</a>
+        </div>
+
+    </div>
+    {{/if}}
+    {{/each}}
+
+    {{!-- <div class="destination-ticket">
+                <div class="destination-left">
+                    <img src="https://image.freepik.com/free-photo/buildings-tall-tower_181624-20757.jpg" alt="">
+                </div>
+                <div class="destination-right">
+                    <div>
+                        <h3>Canada</h3><span>2021-09-02</span>
+                    </div>
+                    <div>
+                        to Toronto
+                    </div>
+                    <p>13 days </p>
+                    <a href="" class="remove">REMOVE</a>
+                    <a href="" class="details">Details</a>
+                </div>
+            </div> --}}
+</section>
